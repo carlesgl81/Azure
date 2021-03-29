@@ -1,0 +1,26 @@
+{
+  "if": {
+    "AllOf": [
+      {
+        "field": "tags['hds']",
+        "exists": "true"
+      },
+      {
+        "field": "tags['hds']",
+        "equals": "yes"
+      },
+      {
+        "field": "location",
+        "notIn": [
+          "France Central",
+          "France South",
+          "North Europe",
+          "West Europe"
+        ]
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
