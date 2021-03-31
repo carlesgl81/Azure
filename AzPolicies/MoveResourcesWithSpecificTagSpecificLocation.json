@@ -1,0 +1,26 @@
+{
+  "if": {
+    "AllOf": [
+      {
+        "field": "tags['TAGNAME']",
+        "exists": "true"
+      },
+      {
+        "field": "tags['TAGNAME']",
+        "equals": "yes"
+      },
+      {
+        "field": "location",
+        "notIn": [
+          "France Central",
+          "France South",
+          "North Europe",
+          "West Europe"
+        ]
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
