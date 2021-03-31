@@ -2,11 +2,11 @@
   "if": {
     "AllOf": [
       {
-        "field": "tags['hds']",
+        "field": "tags['TAGNAME']",
         "exists": "true"
       },
       {
-        "field": "tags['hds']",
+        "field": "tags['TAGNAME']",
         "equals": "yes"
       },
       {
